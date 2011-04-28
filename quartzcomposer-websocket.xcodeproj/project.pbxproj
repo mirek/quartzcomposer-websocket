@@ -1,0 +1,285 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		EB39691F1369F22F0006E49B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB39691E1369F22F0006E49B /* Cocoa.framework */; };
+		EB3969211369F22F0006E49B /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3969201369F22F0006E49B /* Quartz.framework */; };
+		EB39692D1369F22F0006E49B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB39692B1369F22F0006E49B /* InfoPlist.strings */; };
+		EB3969311369F22F0006E49B /* quartzcomposer_websocketPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3969301369F22F0006E49B /* quartzcomposer_websocketPlugin.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		EB39691B1369F22F0006E49B /* quartzcomposer-websocket.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quartzcomposer-websocket.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB39691E1369F22F0006E49B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		EB3969201369F22F0006E49B /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
+		EB3969231369F22F0006E49B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		EB3969241369F22F0006E49B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		EB3969251369F22F0006E49B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		EB39692A1369F22F0006E49B /* quartzcomposer-websocket-Info.plist */ = {isa = PBXFileReference; path = "quartzcomposer-websocket-Info.plist"; sourceTree = "<group>"; };
+		EB39692C1369F22F0006E49B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		EB39692E1369F22F0006E49B /* quartzcomposer-websocket-Prefix.pch */ = {isa = PBXFileReference; path = "quartzcomposer-websocket-Prefix.pch"; sourceTree = "<group>"; };
+		EB39692F1369F22F0006E49B /* quartzcomposer_websocketPlugin.h */ = {isa = PBXFileReference; path = quartzcomposer_websocketPlugin.h; sourceTree = "<group>"; };
+		EB3969301369F22F0006E49B /* quartzcomposer_websocketPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = quartzcomposer_websocketPlugin.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		EB3969171369F22F0006E49B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB39691F1369F22F0006E49B /* Cocoa.framework in Frameworks */,
+				EB3969211369F22F0006E49B /* Quartz.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		EB39690F1369F22F0006E49B = {
+			isa = PBXGroup;
+			children = (
+				EB3969281369F22F0006E49B /* quartzcomposer-websocket */,
+				EB39691D1369F22F0006E49B /* Frameworks */,
+				EB39691C1369F22F0006E49B /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		EB39691C1369F22F0006E49B /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				EB39691B1369F22F0006E49B /* quartzcomposer-websocket.plugin */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EB39691D1369F22F0006E49B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB39691E1369F22F0006E49B /* Cocoa.framework */,
+				EB3969201369F22F0006E49B /* Quartz.framework */,
+				EB3969221369F22F0006E49B /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EB3969221369F22F0006E49B /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				EB3969231369F22F0006E49B /* AppKit.framework */,
+				EB3969241369F22F0006E49B /* CoreData.framework */,
+				EB3969251369F22F0006E49B /* Foundation.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		EB3969281369F22F0006E49B /* quartzcomposer-websocket */ = {
+			isa = PBXGroup;
+			children = (
+				EB39692F1369F22F0006E49B /* quartzcomposer_websocketPlugin.h */,
+				EB3969301369F22F0006E49B /* quartzcomposer_websocketPlugin.m */,
+				EB3969291369F22F0006E49B /* Supporting Files */,
+			);
+			path = "quartzcomposer-websocket";
+			sourceTree = "<group>";
+		};
+		EB3969291369F22F0006E49B /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				EB39692A1369F22F0006E49B /* quartzcomposer-websocket-Info.plist */,
+				EB39692B1369F22F0006E49B /* InfoPlist.strings */,
+				EB39692E1369F22F0006E49B /* quartzcomposer-websocket-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		EB39691A1369F22F0006E49B /* quartzcomposer-websocket */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EB3969341369F22F0006E49B /* Build configuration list for PBXNativeTarget "quartzcomposer-websocket" */;
+			buildPhases = (
+				EB3969161369F22F0006E49B /* Sources */,
+				EB3969171369F22F0006E49B /* Frameworks */,
+				EB3969181369F22F0006E49B /* Resources */,
+				EB3969191369F22F0006E49B /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "quartzcomposer-websocket";
+			productName = "quartzcomposer-websocket";
+			productReference = EB39691B1369F22F0006E49B /* quartzcomposer-websocket.plugin */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		EB3969111369F22F0006E49B /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				ORGANIZATIONNAME = "Inteliv Ltd";
+			};
+			buildConfigurationList = EB3969141369F22F0006E49B /* Build configuration list for PBXProject "quartzcomposer-websocket" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = EB39690F1369F22F0006E49B;
+			productRefGroup = EB39691C1369F22F0006E49B /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				EB39691A1369F22F0006E49B /* quartzcomposer-websocket */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		EB3969181369F22F0006E49B /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB39692D1369F22F0006E49B /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		EB3969191369F22F0006E49B /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/quartzcomposer-websocket.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/quartzcomposer-websocket.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		EB3969161369F22F0006E49B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EB3969311369F22F0006E49B /* quartzcomposer_websocketPlugin.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		EB39692B1369F22F0006E49B /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EB39692C1369F22F0006E49B /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		EB3969321369F22F0006E49B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		EB3969331369F22F0006E49B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		EB3969351369F22F0006E49B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "quartzcomposer-websocket/quartzcomposer-websocket-Prefix.pch";
+				INFOPLIST_FILE = "quartzcomposer-websocket/quartzcomposer-websocket-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Debug;
+		};
+		EB3969361369F22F0006E49B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_ENABLE_OBJC_GC = supported;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "quartzcomposer-websocket/quartzcomposer-websocket-Prefix.pch";
+				INFOPLIST_FILE = "quartzcomposer-websocket/quartzcomposer-websocket-Info.plist";
+				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = plugin;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		EB3969141369F22F0006E49B /* Build configuration list for PBXProject "quartzcomposer-websocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB3969321369F22F0006E49B /* Debug */,
+				EB3969331369F22F0006E49B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		EB3969341369F22F0006E49B /* Build configuration list for PBXNativeTarget "quartzcomposer-websocket" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EB3969351369F22F0006E49B /* Debug */,
+				EB3969361369F22F0006E49B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = EB3969111369F22F0006E49B /* Project object */;
+}
