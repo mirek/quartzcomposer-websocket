@@ -1,0 +1,5 @@
+# Quartz Composer WebSocket Plug-In
+
+Web Socket Patch enables web browser - Quartz Composer fast, bi-directional communication.
+
+Most of the modern browsers (Safari, Chrome, Firefox and Opera) as well as Adobe Flash/Flex have built-in support for Web Sockets.
