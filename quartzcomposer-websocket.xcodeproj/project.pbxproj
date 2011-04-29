@@ -10,21 +10,59 @@
 		EB39691F1369F22F0006E49B /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB39691E1369F22F0006E49B /* Cocoa.framework */; };
 		EB3969211369F22F0006E49B /* Quartz.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EB3969201369F22F0006E49B /* Quartz.framework */; };
 		EB39692D1369F22F0006E49B /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = EB39692B1369F22F0006E49B /* InfoPlist.strings */; };
-		EB3969311369F22F0006E49B /* quartzcomposer_websocketPlugin.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3969301369F22F0006E49B /* quartzcomposer_websocketPlugin.m */; };
+		EB3969311369F22F0006E49B /* WebSocketPlugIn.m in Sources */ = {isa = PBXBuildFile; fileRef = EB3969301369F22F0006E49B /* WebSocketPlugIn.m */; };
+		EB39693C1369F8660006E49B /* WebSocketSettings.xib in Resources */ = {isa = PBXBuildFile; fileRef = EB39693B1369F8660006E49B /* WebSocketSettings.xib */; };
+		EB3969531369FE370006E49B /* CoreJSON.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969521369FE370006E49B /* CoreJSON.c */; };
+		EB3969631369FE730006E49B /* yajl.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969551369FE730006E49B /* yajl.c */; };
+		EB3969641369FE730006E49B /* yajl_version.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969561369FE730006E49B /* yajl_version.c */; };
+		EB3969651369FE730006E49B /* yajl_parser.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969581369FE730006E49B /* yajl_parser.c */; };
+		EB3969661369FE730006E49B /* yajl_lex.c in Sources */ = {isa = PBXBuildFile; fileRef = EB39695A1369FE730006E49B /* yajl_lex.c */; };
+		EB3969671369FE730006E49B /* yajl_gen.c in Sources */ = {isa = PBXBuildFile; fileRef = EB39695B1369FE730006E49B /* yajl_gen.c */; };
+		EB3969681369FE730006E49B /* yajl_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = EB39695D1369FE730006E49B /* yajl_encode.c */; };
+		EB3969691369FE730006E49B /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969601369FE730006E49B /* yajl_buf.c */; };
+		EB39696A1369FE730006E49B /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969621369FE730006E49B /* yajl_alloc.c */; };
+		EB396972136A03B60006E49B /* WebSocketString.c in Sources */ = {isa = PBXBuildFile; fileRef = EB39696D136A03B60006E49B /* WebSocketString.c */; };
+		EB396973136A03B60006E49B /* WebSocketClient.c in Sources */ = {isa = PBXBuildFile; fileRef = EB39696F136A03B60006E49B /* WebSocketClient.c */; };
+		EB396974136A03B60006E49B /* WebSocket.c in Sources */ = {isa = PBXBuildFile; fileRef = EB396971136A03B60006E49B /* WebSocket.c */; };
+		EB396976136A03EB0006E49B /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB396975136A03EB0006E49B /* libcrypto.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		EB39691B1369F22F0006E49B /* quartzcomposer-websocket.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "quartzcomposer-websocket.plugin"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB39691B1369F22F0006E49B /* WebSocket.plugin */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WebSocket.plugin; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB39691E1369F22F0006E49B /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
 		EB3969201369F22F0006E49B /* Quartz.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Quartz.framework; path = System/Library/Frameworks/Quartz.framework; sourceTree = SDKROOT; };
 		EB3969231369F22F0006E49B /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
-		EB3969241369F22F0006E49B /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
 		EB3969251369F22F0006E49B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
-		EB39692A1369F22F0006E49B /* quartzcomposer-websocket-Info.plist */ = {isa = PBXFileReference; path = "quartzcomposer-websocket-Info.plist"; sourceTree = "<group>"; };
+		EB39692A1369F22F0006E49B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EB39692C1369F22F0006E49B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
-		EB39692E1369F22F0006E49B /* quartzcomposer-websocket-Prefix.pch */ = {isa = PBXFileReference; path = "quartzcomposer-websocket-Prefix.pch"; sourceTree = "<group>"; };
-		EB39692F1369F22F0006E49B /* quartzcomposer_websocketPlugin.h */ = {isa = PBXFileReference; path = quartzcomposer_websocketPlugin.h; sourceTree = "<group>"; };
-		EB3969301369F22F0006E49B /* quartzcomposer_websocketPlugin.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = quartzcomposer_websocketPlugin.m; sourceTree = "<group>"; };
+		EB39692E1369F22F0006E49B /* Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Prefix.pch; sourceTree = "<group>"; };
+		EB39692F1369F22F0006E49B /* WebSocketPlugIn.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WebSocketPlugIn.h; sourceTree = "<group>"; };
+		EB3969301369F22F0006E49B /* WebSocketPlugIn.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WebSocketPlugIn.m; sourceTree = "<group>"; };
+		EB39693B1369F8660006E49B /* WebSocketSettings.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = WebSocketSettings.xib; sourceTree = "<group>"; };
+		EB3969511369FE370006E49B /* CoreJSON.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = CoreJSON.h; path = CoreJSON/CoreJSON/CoreJSON.h; sourceTree = "<group>"; };
+		EB3969521369FE370006E49B /* CoreJSON.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = CoreJSON.c; path = CoreJSON/CoreJSON/CoreJSON.c; sourceTree = "<group>"; };
+		EB3969551369FE730006E49B /* yajl.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl.c; path = CoreJSON/YAJL/yajl/src/yajl.c; sourceTree = "<group>"; };
+		EB3969561369FE730006E49B /* yajl_version.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_version.c; path = CoreJSON/YAJL/yajl/src/yajl_version.c; sourceTree = "<group>"; };
+		EB3969571369FE730006E49B /* yajl_parser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_parser.h; path = CoreJSON/YAJL/yajl/src/yajl_parser.h; sourceTree = "<group>"; };
+		EB3969581369FE730006E49B /* yajl_parser.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_parser.c; path = CoreJSON/YAJL/yajl/src/yajl_parser.c; sourceTree = "<group>"; };
+		EB3969591369FE730006E49B /* yajl_lex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_lex.h; path = CoreJSON/YAJL/yajl/src/yajl_lex.h; sourceTree = "<group>"; };
+		EB39695A1369FE730006E49B /* yajl_lex.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_lex.c; path = CoreJSON/YAJL/yajl/src/yajl_lex.c; sourceTree = "<group>"; };
+		EB39695B1369FE730006E49B /* yajl_gen.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_gen.c; path = CoreJSON/YAJL/yajl/src/yajl_gen.c; sourceTree = "<group>"; };
+		EB39695C1369FE730006E49B /* yajl_encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_encode.h; path = CoreJSON/YAJL/yajl/src/yajl_encode.h; sourceTree = "<group>"; };
+		EB39695D1369FE730006E49B /* yajl_encode.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_encode.c; path = CoreJSON/YAJL/yajl/src/yajl_encode.c; sourceTree = "<group>"; };
+		EB39695E1369FE730006E49B /* yajl_bytestack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_bytestack.h; path = CoreJSON/YAJL/yajl/src/yajl_bytestack.h; sourceTree = "<group>"; };
+		EB39695F1369FE730006E49B /* yajl_buf.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_buf.h; path = CoreJSON/YAJL/yajl/src/yajl_buf.h; sourceTree = "<group>"; };
+		EB3969601369FE730006E49B /* yajl_buf.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_buf.c; path = CoreJSON/YAJL/yajl/src/yajl_buf.c; sourceTree = "<group>"; };
+		EB3969611369FE730006E49B /* yajl_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_alloc.h; path = CoreJSON/YAJL/yajl/src/yajl_alloc.h; sourceTree = "<group>"; };
+		EB3969621369FE730006E49B /* yajl_alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_alloc.c; path = CoreJSON/YAJL/yajl/src/yajl_alloc.c; sourceTree = "<group>"; };
+		EB39696B136A03B60006E49B /* WebSocketTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketTypes.h; path = CoreWebSocket/WebSocketCore/WebSocketTypes.h; sourceTree = "<group>"; };
+		EB39696C136A03B60006E49B /* WebSocketString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketString.h; path = CoreWebSocket/WebSocketCore/WebSocketString.h; sourceTree = "<group>"; };
+		EB39696D136A03B60006E49B /* WebSocketString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WebSocketString.c; path = CoreWebSocket/WebSocketCore/WebSocketString.c; sourceTree = "<group>"; };
+		EB39696E136A03B60006E49B /* WebSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketClient.h; path = CoreWebSocket/WebSocketCore/WebSocketClient.h; sourceTree = "<group>"; };
+		EB39696F136A03B60006E49B /* WebSocketClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WebSocketClient.c; path = CoreWebSocket/WebSocketCore/WebSocketClient.c; sourceTree = "<group>"; };
+		EB396970136A03B60006E49B /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocket.h; path = CoreWebSocket/WebSocketCore/WebSocket.h; sourceTree = "<group>"; };
+		EB396971136A03B60006E49B /* WebSocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WebSocket.c; path = CoreWebSocket/WebSocketCore/WebSocket.c; sourceTree = "<group>"; };
+		EB396975136A03EB0006E49B /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -32,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				EB396976136A03EB0006E49B /* libcrypto.dylib in Frameworks */,
 				EB39691F1369F22F0006E49B /* Cocoa.framework in Frameworks */,
 				EB3969211369F22F0006E49B /* Quartz.framework in Frameworks */,
 			);
@@ -43,7 +82,9 @@
 		EB39690F1369F22F0006E49B = {
 			isa = PBXGroup;
 			children = (
-				EB3969281369F22F0006E49B /* quartzcomposer-websocket */,
+				EB3969381369F7620006E49B /* CoreWebSocket */,
+				EB3969371369F75C0006E49B /* CoreJSON */,
+				EB3969281369F22F0006E49B /* WebSocket */,
 				EB39691D1369F22F0006E49B /* Frameworks */,
 				EB39691C1369F22F0006E49B /* Products */,
 			);
@@ -52,7 +93,7 @@
 		EB39691C1369F22F0006E49B /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				EB39691B1369F22F0006E49B /* quartzcomposer-websocket.plugin */,
+				EB39691B1369F22F0006E49B /* WebSocket.plugin */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -60,49 +101,88 @@
 		EB39691D1369F22F0006E49B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				EB396975136A03EB0006E49B /* libcrypto.dylib */,
+				EB3969231369F22F0006E49B /* AppKit.framework */,
+				EB3969251369F22F0006E49B /* Foundation.framework */,
 				EB39691E1369F22F0006E49B /* Cocoa.framework */,
 				EB3969201369F22F0006E49B /* Quartz.framework */,
-				EB3969221369F22F0006E49B /* Other Frameworks */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EB3969221369F22F0006E49B /* Other Frameworks */ = {
+		EB3969281369F22F0006E49B /* WebSocket */ = {
 			isa = PBXGroup;
 			children = (
-				EB3969231369F22F0006E49B /* AppKit.framework */,
-				EB3969241369F22F0006E49B /* CoreData.framework */,
-				EB3969251369F22F0006E49B /* Foundation.framework */,
-			);
-			name = "Other Frameworks";
-			sourceTree = "<group>";
-		};
-		EB3969281369F22F0006E49B /* quartzcomposer-websocket */ = {
-			isa = PBXGroup;
-			children = (
-				EB39692F1369F22F0006E49B /* quartzcomposer_websocketPlugin.h */,
-				EB3969301369F22F0006E49B /* quartzcomposer_websocketPlugin.m */,
+				EB39692F1369F22F0006E49B /* WebSocketPlugIn.h */,
+				EB3969301369F22F0006E49B /* WebSocketPlugIn.m */,
+				EB39693B1369F8660006E49B /* WebSocketSettings.xib */,
 				EB3969291369F22F0006E49B /* Supporting Files */,
 			);
+			name = WebSocket;
 			path = "quartzcomposer-websocket";
 			sourceTree = "<group>";
 		};
 		EB3969291369F22F0006E49B /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				EB39692A1369F22F0006E49B /* quartzcomposer-websocket-Info.plist */,
+				EB39692A1369F22F0006E49B /* Info.plist */,
 				EB39692B1369F22F0006E49B /* InfoPlist.strings */,
-				EB39692E1369F22F0006E49B /* quartzcomposer-websocket-Prefix.pch */,
+				EB39692E1369F22F0006E49B /* Prefix.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		EB3969371369F75C0006E49B /* CoreJSON */ = {
+			isa = PBXGroup;
+			children = (
+				EB3969541369FE3B0006E49B /* YAJL */,
+				EB3969511369FE370006E49B /* CoreJSON.h */,
+				EB3969521369FE370006E49B /* CoreJSON.c */,
+			);
+			name = CoreJSON;
+			sourceTree = "<group>";
+		};
+		EB3969381369F7620006E49B /* CoreWebSocket */ = {
+			isa = PBXGroup;
+			children = (
+				EB39696B136A03B60006E49B /* WebSocketTypes.h */,
+				EB39696C136A03B60006E49B /* WebSocketString.h */,
+				EB39696D136A03B60006E49B /* WebSocketString.c */,
+				EB39696E136A03B60006E49B /* WebSocketClient.h */,
+				EB39696F136A03B60006E49B /* WebSocketClient.c */,
+				EB396970136A03B60006E49B /* WebSocket.h */,
+				EB396971136A03B60006E49B /* WebSocket.c */,
+			);
+			name = CoreWebSocket;
+			sourceTree = "<group>";
+		};
+		EB3969541369FE3B0006E49B /* YAJL */ = {
+			isa = PBXGroup;
+			children = (
+				EB3969551369FE730006E49B /* yajl.c */,
+				EB3969561369FE730006E49B /* yajl_version.c */,
+				EB3969571369FE730006E49B /* yajl_parser.h */,
+				EB3969581369FE730006E49B /* yajl_parser.c */,
+				EB3969591369FE730006E49B /* yajl_lex.h */,
+				EB39695A1369FE730006E49B /* yajl_lex.c */,
+				EB39695B1369FE730006E49B /* yajl_gen.c */,
+				EB39695C1369FE730006E49B /* yajl_encode.h */,
+				EB39695D1369FE730006E49B /* yajl_encode.c */,
+				EB39695E1369FE730006E49B /* yajl_bytestack.h */,
+				EB39695F1369FE730006E49B /* yajl_buf.h */,
+				EB3969601369FE730006E49B /* yajl_buf.c */,
+				EB3969611369FE730006E49B /* yajl_alloc.h */,
+				EB3969621369FE730006E49B /* yajl_alloc.c */,
+			);
+			name = YAJL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		EB39691A1369F22F0006E49B /* quartzcomposer-websocket */ = {
+		EB39691A1369F22F0006E49B /* WebSocket */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = EB3969341369F22F0006E49B /* Build configuration list for PBXNativeTarget "quartzcomposer-websocket" */;
+			buildConfigurationList = EB3969341369F22F0006E49B /* Build configuration list for PBXNativeTarget "WebSocket" */;
 			buildPhases = (
 				EB3969161369F22F0006E49B /* Sources */,
 				EB3969171369F22F0006E49B /* Frameworks */,
@@ -113,9 +193,9 @@
 			);
 			dependencies = (
 			);
-			name = "quartzcomposer-websocket";
+			name = WebSocket;
 			productName = "quartzcomposer-websocket";
-			productReference = EB39691B1369F22F0006E49B /* quartzcomposer-websocket.plugin */;
+			productReference = EB39691B1369F22F0006E49B /* WebSocket.plugin */;
 			productType = "com.apple.product-type.bundle";
 		};
 /* End PBXNativeTarget section */
@@ -138,7 +218,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				EB39691A1369F22F0006E49B /* quartzcomposer-websocket */,
+				EB39691A1369F22F0006E49B /* WebSocket */,
 			);
 		};
 /* End PBXProject section */
@@ -149,6 +229,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EB39692D1369F22F0006E49B /* InfoPlist.strings in Resources */,
+				EB39693C1369F8660006E49B /* WebSocketSettings.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -166,7 +247,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/quartzcomposer-websocket.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/quartzcomposer-websocket.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
+			shellScript = "# This shell script simply copies the built plug-in to \"~/Library/Graphics/Quartz Composer Plug-Ins\" and overrides any previous version at that location\n\nmkdir -p \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins\"\nrm -rf \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/WebSocket.plugin\"\ncp -rf \"$BUILT_PRODUCTS_DIR/WebSocket.plugin\" \"$USER_LIBRARY_DIR/Graphics/Quartz Composer Plug-Ins/\"\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -175,7 +256,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EB3969311369F22F0006E49B /* quartzcomposer_websocketPlugin.m in Sources */,
+				EB3969311369F22F0006E49B /* WebSocketPlugIn.m in Sources */,
+				EB3969531369FE370006E49B /* CoreJSON.c in Sources */,
+				EB3969631369FE730006E49B /* yajl.c in Sources */,
+				EB3969641369FE730006E49B /* yajl_version.c in Sources */,
+				EB3969651369FE730006E49B /* yajl_parser.c in Sources */,
+				EB3969661369FE730006E49B /* yajl_lex.c in Sources */,
+				EB3969671369FE730006E49B /* yajl_gen.c in Sources */,
+				EB3969681369FE730006E49B /* yajl_encode.c in Sources */,
+				EB3969691369FE730006E49B /* yajl_buf.c in Sources */,
+				EB39696A1369FE730006E49B /* yajl_alloc.c in Sources */,
+				EB396972136A03B60006E49B /* WebSocketString.c in Sources */,
+				EB396973136A03B60006E49B /* WebSocketClient.c in Sources */,
+				EB396974136A03B60006E49B /* WebSocket.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -234,8 +327,9 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "quartzcomposer-websocket/quartzcomposer-websocket-Prefix.pch";
-				INFOPLIST_FILE = "quartzcomposer-websocket/quartzcomposer-websocket-Info.plist";
+				GCC_PREFIX_HEADER = "quartzcomposer-websocket/Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CoreJSON/YAJL/include\"";
+				INFOPLIST_FILE = "quartzcomposer-websocket/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = plugin;
@@ -251,8 +345,9 @@
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_ENABLE_OBJC_GC = supported;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "quartzcomposer-websocket/quartzcomposer-websocket-Prefix.pch";
-				INFOPLIST_FILE = "quartzcomposer-websocket/quartzcomposer-websocket-Info.plist";
+				GCC_PREFIX_HEADER = "quartzcomposer-websocket/Prefix.pch";
+				HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CoreJSON/YAJL/include\"";
+				INFOPLIST_FILE = "quartzcomposer-websocket/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = plugin;
@@ -271,7 +366,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		EB3969341369F22F0006E49B /* Build configuration list for PBXNativeTarget "quartzcomposer-websocket" */ = {
+		EB3969341369F22F0006E49B /* Build configuration list for PBXNativeTarget "WebSocket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				EB3969351369F22F0006E49B /* Debug */,

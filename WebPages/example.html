@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <title></title>
+    <style type="text/css" media="screen">
+      
+      .off {
+        background-color: red;
+      }
+      
+      .on {
+        background-color: blue;
+      }
+    
+    </style>
+    <script type="text/javascript" charset="utf-8">
+      
+      // WebSocket
+      var ws = null;
+      
+      window.addEventListener('load', function(e) {
+        
+        if ("WebSocket" in window) {
+          ws = new WebSocket('ws://localhost:60001')
+          ws.onerror = function(e) {
+            document.getElementById('connection-status').setAttribute('class', 'off')
+            console.log('error', e)
+          }
+          ws.onopen = function(e) {
+            document.getElementById('connection-status').setAttribute('class', 'on')
+            console.log('open', e)
+          }
+          ws.onmessage = function(e) {
+            var f = parseFloat(JSON.parse(e.data)[1]['member'])
+            document.getElementById('square').style.webkitTransform = "translate(" + f + ", 0)";
+            // console.log(i)
+            // console.log('message', e.data)
+          }
+          ws.onclose = function(e) {
+            console.log('close', e)
+          }
+        } else {
+          alert('WebSocket not supported by your browser, use Safari, Chrome or Firefox')
+        }
+      }, false);
+      
+    </script>
+  </head>
+  <body id="example" onload="">
+    
+    <div id="connection-status" style="width: 1em; height: 1em; -webkit-border-radius: 1em; float: left; margin-right: .5em"></div> <code>ws://localhost:60001</code>
+    
+    
+    <div id="square" style="width: 1em; height: 1em; background-color: black"></div>
+    
+  </body>
+</html>

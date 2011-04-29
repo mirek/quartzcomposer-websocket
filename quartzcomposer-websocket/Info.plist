@@ -19,10 +19,10 @@
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>NSHumanReadableCopyright</key>
-	<string>Copyright © 2011 Inteliv Ltd. All rights reserved.</string>
+	<string>Copyright © 2011 Mirek Rusin &lt;mirek [at] me [dot] com&gt;</string>
 	<key>QCPlugInClasses</key>
 	<array>
-		<string>quartzcomposer_websocketPlugIn</string>
+		<string>WebSocketPlugIn</string>
 	</array>
 </dict>
 </plist>
