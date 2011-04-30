@@ -1,5 +1,86 @@
 # Quartz Composer WebSocket Plug-In
 
-Web Socket Patch enables web browser - Quartz Composer fast, bi-directional communication.
+WebSocket Patch enables low-latency, bi-directional, full-duplex communication with web browsers - Firefox 4, Google Chrome 4, Opera 11 and Apple Safari 5 (including iOS Safari) as well as Adobe Flash/Flex/AIR applications.
 
-Most of the modern browsers (Safari, Chrome, Firefox and Opera) as well as Adobe Flash/Flex have built-in support for Web Sockets.
+The patch acts as a server listening on specified TCP port (default 60001).
+
+To make connection to the patch you could use the following JavaScript code:
+
+  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+      <script type="text/javascript" charset="utf-8">
+      
+        // WebSocket
+        var ws = null;
+      
+        // When the page is loaded...
+        window.addEventListener('load', function(e) {
+        
+          // Check if the browser supports WebSockets...
+          if ("WebSocket" in window) {
+          
+            // ...it does, let's connect to localhost default port.
+            // Make sure Quartz Composer composition is running with
+            // the WebSocket Patch set to port 60001. 
+            ws = new WebSocket('ws://localhost:60001');
+            
+            // Invoked when there was an error with the connection. 
+            ws.onerror = function(e) {
+              console.log('error', e);
+            }
+            
+            // Invoked when the socket has been opened successfully.
+            ws.onopen = function(e) {
+              console.log('open', e);
+            }
+            
+            // Callback invoked when incoming messages arrive. Event `data` attribute
+            // holds the string passed. WebSocket in current spec supports utf8 text-based
+            // communication only. Binary data  is base64 encoded.
+            ws.onmessage = function(e) {
+              var json = JSON.parse(e.data);
+              console.log('message', json);
+            }
+            
+            // Invoked when the socket has been closed
+            ws.onclose = function(e) {
+              console.log('close', e);
+            }
+            
+          } else {
+          
+            // ...seems like the web browser doesn't support WebSockets.
+            alert('WebSocket not supported by your browser, use Safari, Chrome or Firefox');
+            
+          }
+        }, false);
+        
+      </script>
+    </head>
+  </html>
+
+Messages are JSON encoded into tuples `[name, value]`. Example messages:
+
+  // Number input port
+  ['/foo/bar', 3.14]
+  
+  // Boolean
+  ['/my/toggle', true]
+  
+  // Array
+  ['/foo/numbers', [1, 3, 5, 7, 11]]
+  
+  // Structure
+  ['/structure', { 'foo': 'bar' }]
+  
+  // Image
+  ['/foo/bar', 'R0lGODlhDwAPALMAAAAAAL+/v///AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACH5BAEAAAEALAAAAAAPAA8AAAQ0MEgJap04VMH5xUAnelM4jgAlmOtqpqzlxewpbjZa565nvxrfjRScyYjFXwbX+WQ0lhQmAgA7']
+
+In order to send values from web page to Quartz Composer, in JavaScript JSON encode the tuple, ie:
+
+  var value = 3.14;
+  ws.send( JSON.stringify(['/foo/bar', value]) );
+
+If the WebSocket Patch has `foo/bar` output port defined with Number format, the value will arrive to Quartz Composer for further processing.
