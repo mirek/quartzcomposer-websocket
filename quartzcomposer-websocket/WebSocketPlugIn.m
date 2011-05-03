@@ -16,6 +16,9 @@
 
 @implementation WebSocketPlugIn
 
+@synthesize inputs;
+@synthesize outputs;
+
 @dynamic inputFoo;
 /*
 Here you need to declare the input / output properties as dynamic as Quartz Composer will handle their implementation

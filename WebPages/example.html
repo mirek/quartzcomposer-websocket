@@ -34,8 +34,7 @@
           ws.onmessage = function(e) {
             var f = parseFloat(JSON.parse(e.data)[1]['member'])
             document.getElementById('square').style.webkitTransform = "translate(" + f + ", 0)";
-            // console.log(i)
-            // console.log('message', e.data)
+            console.log('message', e.data)
           }
           ws.onclose = function(e) {
             console.log('close', e)

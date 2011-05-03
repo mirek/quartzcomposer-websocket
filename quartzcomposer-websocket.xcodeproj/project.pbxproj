@@ -21,10 +21,11 @@
 		EB3969681369FE730006E49B /* yajl_encode.c in Sources */ = {isa = PBXBuildFile; fileRef = EB39695D1369FE730006E49B /* yajl_encode.c */; };
 		EB3969691369FE730006E49B /* yajl_buf.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969601369FE730006E49B /* yajl_buf.c */; };
 		EB39696A1369FE730006E49B /* yajl_alloc.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969621369FE730006E49B /* yajl_alloc.c */; };
-		EB396972136A03B60006E49B /* WebSocketString.c in Sources */ = {isa = PBXBuildFile; fileRef = EB39696D136A03B60006E49B /* WebSocketString.c */; };
 		EB396973136A03B60006E49B /* WebSocketClient.c in Sources */ = {isa = PBXBuildFile; fileRef = EB39696F136A03B60006E49B /* WebSocketClient.c */; };
 		EB396974136A03B60006E49B /* WebSocket.c in Sources */ = {isa = PBXBuildFile; fileRef = EB396971136A03B60006E49B /* WebSocket.c */; };
 		EB396976136A03EB0006E49B /* libcrypto.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = EB396975136A03EB0006E49B /* libcrypto.dylib */; };
+		EB39697C136C571F0006E49B /* WebSocketSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = EB39697B136C571F0006E49B /* WebSocketSettings.m */; };
+		EB3969A5136F44FD0006E49B /* cuEnc64.c in Sources */ = {isa = PBXBuildFile; fileRef = EB3969A3136F44FD0006E49B /* cuEnc64.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -56,13 +57,15 @@
 		EB3969611369FE730006E49B /* yajl_alloc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = yajl_alloc.h; path = CoreJSON/YAJL/yajl/src/yajl_alloc.h; sourceTree = "<group>"; };
 		EB3969621369FE730006E49B /* yajl_alloc.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_alloc.c; path = CoreJSON/YAJL/yajl/src/yajl_alloc.c; sourceTree = "<group>"; };
 		EB39696B136A03B60006E49B /* WebSocketTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketTypes.h; path = CoreWebSocket/WebSocketCore/WebSocketTypes.h; sourceTree = "<group>"; };
-		EB39696C136A03B60006E49B /* WebSocketString.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketString.h; path = CoreWebSocket/WebSocketCore/WebSocketString.h; sourceTree = "<group>"; };
-		EB39696D136A03B60006E49B /* WebSocketString.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WebSocketString.c; path = CoreWebSocket/WebSocketCore/WebSocketString.c; sourceTree = "<group>"; };
 		EB39696E136A03B60006E49B /* WebSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketClient.h; path = CoreWebSocket/WebSocketCore/WebSocketClient.h; sourceTree = "<group>"; };
 		EB39696F136A03B60006E49B /* WebSocketClient.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WebSocketClient.c; path = CoreWebSocket/WebSocketCore/WebSocketClient.c; sourceTree = "<group>"; };
 		EB396970136A03B60006E49B /* WebSocket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocket.h; path = CoreWebSocket/WebSocketCore/WebSocket.h; sourceTree = "<group>"; };
 		EB396971136A03B60006E49B /* WebSocket.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WebSocket.c; path = CoreWebSocket/WebSocketCore/WebSocket.c; sourceTree = "<group>"; };
 		EB396975136A03EB0006E49B /* libcrypto.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libcrypto.dylib; path = usr/lib/libcrypto.dylib; sourceTree = SDKROOT; };
+		EB39697A136C571F0006E49B /* WebSocketSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WebSocketSettings.h; sourceTree = "<group>"; };
+		EB39697B136C571F0006E49B /* WebSocketSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WebSocketSettings.m; sourceTree = "<group>"; };
+		EB3969A3136F44FD0006E49B /* cuEnc64.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = cuEnc64.c; path = CoreWebSocket/WebSocketCore/cuEnc64.c; sourceTree = "<group>"; };
+		EB3969A4136F44FD0006E49B /* cuEnc64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = cuEnc64.h; path = CoreWebSocket/WebSocketCore/cuEnc64.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +120,8 @@
 				EB3969301369F22F0006E49B /* WebSocketPlugIn.m */,
 				EB39693B1369F8660006E49B /* WebSocketSettings.xib */,
 				EB3969291369F22F0006E49B /* Supporting Files */,
+				EB39697A136C571F0006E49B /* WebSocketSettings.h */,
+				EB39697B136C571F0006E49B /* WebSocketSettings.m */,
 			);
 			name = WebSocket;
 			path = "quartzcomposer-websocket";
@@ -145,9 +150,9 @@
 		EB3969381369F7620006E49B /* CoreWebSocket */ = {
 			isa = PBXGroup;
 			children = (
+				EB3969A3136F44FD0006E49B /* cuEnc64.c */,
+				EB3969A4136F44FD0006E49B /* cuEnc64.h */,
 				EB39696B136A03B60006E49B /* WebSocketTypes.h */,
-				EB39696C136A03B60006E49B /* WebSocketString.h */,
-				EB39696D136A03B60006E49B /* WebSocketString.c */,
 				EB39696E136A03B60006E49B /* WebSocketClient.h */,
 				EB39696F136A03B60006E49B /* WebSocketClient.c */,
 				EB396970136A03B60006E49B /* WebSocket.h */,
@@ -266,9 +271,10 @@
 				EB3969681369FE730006E49B /* yajl_encode.c in Sources */,
 				EB3969691369FE730006E49B /* yajl_buf.c in Sources */,
 				EB39696A1369FE730006E49B /* yajl_alloc.c in Sources */,
-				EB396972136A03B60006E49B /* WebSocketString.c in Sources */,
 				EB396973136A03B60006E49B /* WebSocketClient.c in Sources */,
 				EB396974136A03B60006E49B /* WebSocket.c in Sources */,
+				EB39697C136C571F0006E49B /* WebSocketSettings.m in Sources */,
+				EB3969A5136F44FD0006E49B /* cuEnc64.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +338,7 @@
 				INFOPLIST_FILE = "quartzcomposer-websocket/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Debug;
@@ -350,6 +357,7 @@
 				INFOPLIST_FILE = "quartzcomposer-websocket/Info.plist";
 				INSTALL_PATH = "$(HOME)/Library/Graphics/Quartz Composer Plug-Ins";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = "";
 				WRAPPER_EXTENSION = plugin;
 			};
 			name = Release;
@@ -373,6 +381,7 @@
 				EB3969361369F22F0006E49B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

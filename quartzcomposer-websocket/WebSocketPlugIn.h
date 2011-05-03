@@ -13,9 +13,15 @@
 @interface WebSocketPlugIn : QCPlugIn {
   CFAllocatorRef allocator;
   WebSocketRef webSocket;
+  
+  NSMutableArray *inputs;
+  NSMutableArray *outputs;
 }
 
 @property (retain) NSDictionary *inputFoo;
+
+@property (readonly) NSMutableArray *inputs;
+@property (readonly) NSMutableArray *outputs;
 
 /*
 Declare here the properties to be used as input and output ports for the plug-in e.g.
@@ -23,5 +29,7 @@ Declare here the properties to be used as input and output ports for the plug-in
 @property(assign) NSString* outputBar;
 You can access their values in the appropriate plug-in methods using self.inputFoo or self.inputBar
 */
+
+- (QCPlugInViewController *) createViewController NS_RETURNS_RETAINED;
 
 @end
