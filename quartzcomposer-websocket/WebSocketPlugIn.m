@@ -114,8 +114,9 @@ void WebSocketPlugInReadCallback(WebSocketRef webSocket, WebSocketClientRef clie
     } else {
       // TODO: Remove all dynamic output ports
     }
+  } else {
+    [super setValue: value forKey: key];
   }
-  [super setValue: value forKey: key];
 }
 
 - (id) init {
