@@ -84,3 +84,17 @@ In order to send values from web page to Quartz Composer, in JavaScript JSON enc
     ws.send( JSON.stringify(['/foo/bar', value]) );
 
 If the WebSocket Patch has `foo/bar` output port defined with Number format, the value will arrive to Quartz Composer for further processing.
+
+## Installation
+
+    # Clone the repository including all submodules
+    git clone --recursive git://github.com/mirek/quartzcomposer-websocket.git
+    
+    # Open project in Xcode
+    cd quartzcomposer-websocket
+    open quartzcomposer-websocket.xcodeproj
+    
+    # In Xcode hit ⌘+R to compile the plugin and run Quartz Composer with example composition
+    
+    # Open example web page
+    open WebPages/example.html

@@ -8,10 +8,28 @@
 
 #import <Cocoa/Cocoa.h>
 #import <Quartz/Quartz.h>
+#import "WebSocketPlugIn.h"
 
-@interface WebSocketSettings : QCPlugInViewController {
+@class WebSocketPlugIn;
+
+@interface WebSocketSettings : QCPlugInViewController <NSTableViewDataSource> {
 @private
-    
+ 
+  IBOutlet NSTableView *inputPortsTableView;
+  IBOutlet NSTextField *inputPortNameTextField;
+  IBOutlet NSComboBox *inputPortTypeComboBox;
+  
+  IBOutlet NSTableView *outputPortsTableView;
+  IBOutlet NSTextField *outputPortNameTextField;
+  IBOutlet NSComboBox *outputPortTypeComboBox;
 }
+
+- (WebSocketPlugIn *) plugIn;
+
+- (IBAction) addInputPort: (id) sender;
+- (IBAction) removeInputPort: (id) sender;
+
+- (IBAction) addOutputPort: (id) sender;
+- (IBAction) removeOutputPort: (id) sender;
 
 @end

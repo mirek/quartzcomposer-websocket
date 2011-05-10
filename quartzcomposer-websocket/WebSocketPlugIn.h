@@ -9,27 +9,25 @@
 #import <Quartz/Quartz.h>
 #import "CoreJSON.h"
 #import "WebSocket.h"
+#import "WebSocketSettings.h"
 
 @interface WebSocketPlugIn : QCPlugIn {
   CFAllocatorRef allocator;
   WebSocketRef webSocket;
   
-  NSMutableArray *inputs;
-  NSMutableArray *outputs;
+  NSMutableDictionary *inputPorts;
+  NSMutableDictionary *outputPorts;
+  
+  CFMutableDictionaryRef outputValues;
 }
 
-@property (retain) NSDictionary *inputFoo;
-
-@property (readonly) NSMutableArray *inputs;
-@property (readonly) NSMutableArray *outputs;
-
-/*
-Declare here the properties to be used as input and output ports for the plug-in e.g.
-@property double inputFoo;
-@property(assign) NSString* outputBar;
-You can access their values in the appropriate plug-in methods using self.inputFoo or self.inputBar
-*/
+@property (nonatomic, retain) NSMutableDictionary *inputPorts;
+@property (nonatomic, retain) NSMutableDictionary *outputPorts;
 
 - (QCPlugInViewController *) createViewController NS_RETURNS_RETAINED;
+
+// Not like setValue..., updateValue can be set from outside execute.
+// Duplicate values will be added to the queue or replaced, depending on the settings.
+- (BOOL) updateValue: (id) value forOutputKey: (NSString *) key;
 
 @end
