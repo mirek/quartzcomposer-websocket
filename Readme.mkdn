@@ -90,11 +90,12 @@ If the WebSocket Patch has `foo/bar` output port defined with Number format, the
     # Clone the repository including all submodules
     git clone --recursive git://github.com/mirek/quartzcomposer-websocket.git
     
-    # Open project in Xcode
+    # Build the plugin and install in ~/Library/Graphics/Quartz Composer Plug-Ins/WebSocket.plugin
     cd quartzcomposer-websocket
-    open quartzcomposer-websocket.xcodeproj
+    xcodebuild clean install
     
-    # In Xcode hit ⌘+R to compile the plugin and run Quartz Composer with example composition
+    # Open example composition and run it
+    open Compositions/Example.qtz
     
     # Open example web page
     open WebPages/example.html
