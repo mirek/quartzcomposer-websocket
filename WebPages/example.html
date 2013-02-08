@@ -32,9 +32,15 @@
             console.log('open', e)
           }
           ws.onmessage = function(e) {
-            var f = parseFloat(JSON.parse(e.data)[1]['member'])
-            document.getElementById('square').style.webkitTransform = "translate(" + f + ", 0)";
-            console.log('message', e.data)
+            try {
+              var t = JSON.parse(e.data)
+              var f = parseFloat(JSON.parse(e.data)[1])
+              document.getElementById('square').style.webkitTransform = "translate(" + f + ", 0)";
+              console.log('message', e.data)
+            }
+            catch (error) {
+              // pass
+            }
           }
           ws.onclose = function(e) {
             console.log('close', e)
@@ -50,8 +56,22 @@
     
     <div id="connection-status" style="width: 1em; height: 1em; -webkit-border-radius: 1em; float: left; margin-right: .5em"></div> <code>ws://localhost:60001</code>
     
-    
     <div id="square" style="width: 1em; height: 1em; background-color: black"></div>
+    
+    <table>
+      <tr>
+        <td><code>/foo/range</code></td>
+        <td><input type="range" min="0" max="90" onchange="ws.send( JSON.stringify(['/foo/range', '' + this.value]) )"/></td>
+      </tr>
+      <tr>
+        <td><code>/foo/text</code></td>
+        <td><input type="text" onkeyup="ws.send( JSON.stringify(['/foo/text', '' + this.value]) )"/></td>
+      </tr>
+      <tr>
+        <td><code>/foo/check</code></td>
+        <td><input type="checkbox" onchange="ws.send( JSON.stringify(['/foo/check', this.checked]) )"/></td>
+      </tr>
+    </table>
     
   </body>
 </html>

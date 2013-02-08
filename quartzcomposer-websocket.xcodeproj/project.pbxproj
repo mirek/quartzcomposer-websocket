@@ -27,6 +27,7 @@
 		EB59CC241376F6EB00C02960 /* WebSocket.c in Sources */ = {isa = PBXBuildFile; fileRef = EB59CC1E1376F6EB00C02960 /* WebSocket.c */; };
 		EB59CC251376F6EB00C02960 /* WebSocketClient.c in Sources */ = {isa = PBXBuildFile; fileRef = EB59CC201376F6EB00C02960 /* WebSocketClient.c */; };
 		EB59CC6E1377E43900C02960 /* yajl_tree.c in Sources */ = {isa = PBXBuildFile; fileRef = EB59CC6D1377E43900C02960 /* yajl_tree.c */; };
+		EB93B6EA16C578D40004C53A /* WebSocketFrame.c in Sources */ = {isa = PBXBuildFile; fileRef = EB93B6E816C578D40004C53A /* WebSocketFrame.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -69,6 +70,8 @@
 		EB59CC211376F6EB00C02960 /* WebSocketClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketClient.h; path = CoreWebSocket/CoreWebSocket/WebSocketClient.h; sourceTree = "<group>"; };
 		EB59CC221376F6EB00C02960 /* WebSocketTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketTypes.h; path = CoreWebSocket/CoreWebSocket/WebSocketTypes.h; sourceTree = "<group>"; };
 		EB59CC6D1377E43900C02960 /* yajl_tree.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = yajl_tree.c; path = CoreJSON/YAJL/yajl/src/yajl_tree.c; sourceTree = "<group>"; };
+		EB93B6E816C578D40004C53A /* WebSocketFrame.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = WebSocketFrame.c; path = CoreWebSocket/CoreWebSocket/WebSocketFrame.c; sourceTree = "<group>"; };
+		EB93B6E916C578D40004C53A /* WebSocketFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebSocketFrame.h; path = CoreWebSocket/CoreWebSocket/WebSocketFrame.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +164,8 @@
 				EB59CC201376F6EB00C02960 /* WebSocketClient.c */,
 				EB59CC1D1376F6EB00C02960 /* cuEnc64.h */,
 				EB59CC1C1376F6EB00C02960 /* cuEnc64.c */,
+				EB93B6E816C578D40004C53A /* WebSocketFrame.c */,
+				EB93B6E916C578D40004C53A /* WebSocketFrame.h */,
 			);
 			name = CoreWebSocket;
 			sourceTree = "<group>";
@@ -214,6 +219,7 @@
 		EB3969111369F22F0006E49B /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastUpgradeCheck = 0460;
 				ORGANIZATIONNAME = "Inteliv Ltd";
 			};
 			buildConfigurationList = EB3969141369F22F0006E49B /* Build configuration list for PBXProject "quartzcomposer-websocket" */;
@@ -281,6 +287,7 @@
 				EB59CC241376F6EB00C02960 /* WebSocket.c in Sources */,
 				EB59CC251376F6EB00C02960 /* WebSocketClient.c in Sources */,
 				EB59CC6E1377E43900C02960 /* yajl_tree.c in Sources */,
+				EB93B6EA16C578D40004C53A /* WebSocketFrame.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -302,6 +309,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
@@ -309,9 +320,10 @@
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
-				ONLY_ACTIVE_ARCH = YES;
+				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = macosx;
 				USER_HEADER_SEARCH_PATHS = "\"$(SRCROOT)/CoreWebSocket\"";
 			};
@@ -321,10 +333,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				MACOSX_DEPLOYMENT_TARGET = 10.6;
 				SDKROOT = macosx;
@@ -336,6 +353,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = NO;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -355,6 +373,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				COMBINE_HIDPI_IMAGES = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;

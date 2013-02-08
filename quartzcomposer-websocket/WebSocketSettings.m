@@ -119,4 +119,11 @@
   return objectValue;
 }
 
+#pragma mark NSTextFieldDelegate methods
+
+- (BOOL) control: (NSControl *) control textShouldEndEditing: (NSText *) fieldEditor {
+  NSLog(@"str: %@", fieldEditor.string);
+  return YES;
+}
+
 @end

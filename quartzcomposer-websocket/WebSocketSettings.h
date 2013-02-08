@@ -12,7 +12,7 @@
 
 @class WebSocketPlugIn;
 
-@interface WebSocketSettings : QCPlugInViewController <NSTableViewDataSource> {
+@interface WebSocketSettings : QCPlugInViewController <NSTableViewDataSource, NSTextFieldDelegate> {
 @private
  
   IBOutlet NSTableView *inputPortsTableView;

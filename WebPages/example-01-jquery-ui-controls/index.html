@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>jQuery UI Example Page</title>
+    <link type="text/css" href="css/ui-darkness/jquery-ui-1.8.12.custom.css" rel="stylesheet" />  
+    <script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+    <script type="text/javascript" src="js/jquery-ui-1.8.12.custom.min.js"></script>
+    <script type="text/javascript">
+      $(function(){
+
+        // Tabs
+        $('#tabs').tabs();
+
+        // Dialog     
+        $('#dialog').dialog({
+          autoOpen: false,
+          width: 600,
+          buttons: {
+            "Ok": function() { 
+              $(this).dialog("close"); 
+            }, 
+            "Cancel": function() { 
+              $(this).dialog("close"); 
+            } 
+          }
+        });
+        
+        // Dialog Link
+        $('#dialog_link').click(function(){
+          $('#dialog').dialog('open');
+          return false;
+        });
+
+        // Sliders
+        $('.slider').slider({
+          animate: 'slow',
+          orientation: 'vertical',
+          slide: function(e, u) {
+            ws.send( JSON.stringify([this.id, u.value]) )
+          }
+        });
+        
+        // Hover states on the static widgets
+        $('#dialog_link, ul#icons li').hover(
+          function() { $(this).addClass('ui-state-hover'); }, 
+          function() { $(this).removeClass('ui-state-hover'); }
+        );
+        
+      });
+      
+      //
+      // WebSocket 
+      //
+      
+      var ws = null;
+      
+      window.addEventListener('load', function(e) {
+        
+        if ("WebSocket" in window) {
+          ws = new WebSocket('ws://localhost:60001')
+          ws.onerror = function(e) {
+            // document.getElementById('connection-status').setAttribute('class', 'off')
+            console.log('error', e)
+          }
+          ws.onopen = function(e) {
+            // document.getElementById('connection-status').setAttribute('class', 'on')
+            console.log('open', e)
+          }
+          ws.onmessage = function(e) {
+            try {
+              var t = JSON.parse(e.data)
+              if (k[0])
+                
+              
+              var f = parseFloat(JSON.parse(e.data)[1])
+              document.getElementById('square').style.webkitTransform = "translate(" + f + ", 0)";
+              console.log('message', e.data)
+            }
+            catch (error) {
+              // pass
+            }
+          }
+          ws.onclose = function(e) {
+            console.log('close', e)
+          }
+        } else {
+          alert('WebSocket not supported by your browser, use Safari, Chrome or Firefox')
+        }
+      }, false);
+      
+    </script>
+    <style type="text/css">
+      body{ font: 62.5% "Trebuchet MS", sans-serif; margin: 50px; background-color: black; color: white;}
+      .demoHeaders { margin-top: 2em; }
+      #dialog_link {padding: .4em 1em .4em 20px;text-decoration: none;position: relative;}
+      #dialog_link span.ui-icon {margin: 0 5px 0 0;position: absolute;left: .2em;top: 50%;margin-top: -8px;}
+      ul#icons {margin: 0; padding: 0;}
+      ul#icons li {margin: 2px; position: relative; padding: 4px 0; cursor: pointer; float: left;  list-style: none;}
+      ul#icons span.ui-icon {float: left; margin: 0 4px;}
+      p.paragraph, p.paragraph * { font-size: 1.3em; line-height: 1.5; margin: 1em 0; }
+      a { color: yellow; }
+    </style>  
+  </head>
+  <body>
+    
+    <h1>Quartz Composer WebSocket Plug-In - Example 01 jQuery UI Controls</h1>
+    <div class="paragraph">
+      <div><a href="http://github.com/mirek/quartzcomposer-websocket" target="_blank">http://github.com/mirek/quartzcomposer-websocket</a> - source code, follow code updates.</div>
+      <div><a href="http://twitter.com/quartzcomposer" target="_blank">@quartzcomposer on twitter</a> - quartz composer related info</div>
+      <div><a href="http://quartzcomposer.com" target="_blank">quartzcomposer.com</a></div>
+    </div>
+    
+    <!-- Tabs -->
+    <!-- <h2 class="demoHeaders">Tabs</h2>
+    <div id="tabs">
+      <ul>
+        <li><a href="#tabs-1">First</a></li>
+        <li><a href="#tabs-2">Second</a></li>
+        <li><a href="#tabs-3">Third</a></li>
+      </ul>
+      <div id="tabs-1">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+      <div id="tabs-2">Phasellus mattis tincidunt nibh. Cras orci urna, blandit id, pretium vel, aliquet ornare, felis. Maecenas scelerisque sem non nisl. Fusce sed lorem in enim dictum bibendum.</div>
+      <div id="tabs-3">Nam dui erat, auctor a, dignissim quis, sollicitudin eu, felis. Pellentesque nisi urna, interdum eget, sagittis et, consequat vestibulum, lacus. Mauris porttitor ullamcorper augue.</div>
+    </div> -->
+  
+    <!-- <p><a href="#" id="dialog_link" class="ui-state-default ui-corner-all"><span class="ui-icon ui-icon-newwin"></span>About</a></p> -->
+
+    <!-- ui-dialog -->
+    <!-- <div style="position: absolute; width: 280px; height: 130px;left: 50px; top: 30px; padding: 10px;" class="ui-widget ui-widget-content ui-corner-all">
+      <div class="ui-dialog-content ui-widget-content" style="background: none; border: 0;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+      </div>
+    </div> -->
+    
+    
+    <!-- ui-dialog -->
+    <!-- <div id="dialog" title="Dialog Title">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+    </div> -->
+  
+    <!-- Slider -->
+    <h2 class="demoHeaders">Sliders (/slider/1-5)</h2>
+    <table cellpadding="5">
+      <tr>
+        <td><div class="slider" id="/slider/1"></div></td>
+        <td><div class="slider" id="/slider/2"></div></td>
+        <td><div class="slider" id="/slider/3"></div></td>
+        <td><div class="slider" id="/slider/4"></div></td>
+        <td><div class="slider" id="/slider/5"></div></td>
+      </tr>
+    </table>
+
+  </body>
+</html>
+
+

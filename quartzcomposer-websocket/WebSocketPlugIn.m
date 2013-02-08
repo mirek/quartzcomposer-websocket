@@ -123,7 +123,7 @@ void WebSocketPlugInReadCallback(WebSocketRef webSocket, WebSocketClientRef clie
 	if ((self = [super init])) {
     allocator = NULL;
     outputValues = CFDictionaryCreateMutable(allocator, 0, &kCFTypeDictionaryKeyCallBacks, &kCFTypeDictionaryValueCallBacks);
-    webSocket = WebSocketCreate(allocator, kWebSocketHostAny, 60001, self);
+    webSocket = WebSocketCreateWithHostAndPort(allocator, kWebSocketHostAny, 60001, self);
     WebSocketSetClientReadCallback(webSocket, WebSocketPlugInReadCallback);
 	}
 	return self;
@@ -254,7 +254,7 @@ void WebSocketPlugInReadCallback(WebSocketRef webSocket, WebSocketClientRef clie
         CFArrayAppendValue(array, value);
         
         CFErrorRef *error = NULL;
-        CFStringRef json = JSONCreateString(allocator, array, kJSONReadOptionsDefault, error);
+        CFStringRef json = JSONCreateString(allocator, array, kJSONWriteOptionsDefault, error);
         if (json) {
           NSLog(@"json %@", json);
           WebSocketWriteWithString(webSocket, json);
